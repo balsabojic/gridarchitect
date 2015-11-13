@@ -203,7 +203,7 @@ public class Swmcsv {
 		    readFile(br);
 		} catch (IOException e) {
 				try {					
-					InputStreamReader isr = new InputStreamReader(Swmcsv.class.getResourceAsStream("/../strategy/SWMWinter.csv"));					
+					InputStreamReader isr = new InputStreamReader(Swmcsv.class.getClassLoader().getResourceAsStream("/resources/strategy/SWMWinter.csv"));					
 					BufferedReader br2 = new BufferedReader(isr);					
 					readFile(br2);					
 				} catch (IOException e1) {
@@ -241,7 +241,7 @@ public class Swmcsv {
 		    readFile2(br);
 		} catch (IOException e) {
 				try {
-					InputStreamReader isr = new InputStreamReader(Swmcsv.class.getResourceAsStream("/resources/strategy/SWMSommer.csv"));
+					InputStreamReader isr = new InputStreamReader(Swmcsv.class.getClassLoader().getResourceAsStream("/resources/strategy/SWMSommer.csv"));
 					BufferedReader br2 = new BufferedReader(isr);
 					readFile2(br2);
 				} catch (IOException e1) {
